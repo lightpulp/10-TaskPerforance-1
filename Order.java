@@ -3,6 +3,7 @@ import java.time.format.DateTimeFormatter;
 
 public class Order {
     public void placeOrder(Tray tray) {
+        ConsoleUtils.clearConsole();
         int total = tray.getTotal();
         double vat = total * 0.12; // 12% VAT
         double finalPrice = total + vat;
@@ -14,7 +15,7 @@ public class Order {
         // Receipt header
         System.out.println("\n");
         System.out.println("====================================");
-        System.out.println("       Menu-DO Restaurant");
+        System.out.println("       Rice To Meet You");
         System.out.println("     Serving Happiness Daily");
         System.out.println("====================================");
         System.out.println("Date: " + now.format(dateFormatter));
@@ -26,9 +27,9 @@ public class Order {
 
         // Summary
         System.out.println("------------------------------------");
-        System.out.printf("Subtotal:         ₱%.2f\n", (double) total);
-        System.out.printf("VAT (12%%):        ₱%.2f\n", vat);
-        System.out.printf("Total:            ₱%.2f\n", finalPrice);
+        System.out.printf("Subtotal:         $%.2f\n", (double) total);
+        System.out.printf("VAT (12%%):        $%.2f\n", vat);
+        System.out.printf("Total:            $%.2f\n", finalPrice);
         System.out.println("------------------------------------");
         System.out.println("    THANK YOU FOR YOUR ORDER!");
         System.out.println("        Have a great day!");

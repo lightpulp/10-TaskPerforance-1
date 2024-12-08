@@ -23,7 +23,7 @@ public class Menu {
 
     public void displayMenu() {
         System.out.println("\nThe Menu for Today is:");
-        menuItems.forEach((key, value) -> System.out.printf("%d.) %s    ₱%d\n", key, value, prices.get(key)));
+        menuItems.forEach((key, value) -> System.out.printf("%d.) %s    $%d\n", key, value, prices.get(key)));
     }
 
     public String getItemName(int id) {
