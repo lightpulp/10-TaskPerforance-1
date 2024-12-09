@@ -41,7 +41,6 @@ public class Tray {
     }    
 
     public void displayTray() {
-        ConsoleUtils.clearConsole();
         System.out.println("\nTray Contents:");
         if (items.isEmpty()) {
             System.out.println("Tray is empty!");

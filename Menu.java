@@ -14,18 +14,36 @@ public class Menu {
         menuItems.put(3, "Menudo");
         menuItems.put(4, "Caldereta");
         menuItems.put(5, "Giniling");
+        menuItems.put(6, "Sisig");
+        menuItems.put(7, "Cola-Cola");
+        menuItems.put(8, "Stripe");
+        menuItems.put(9, "Fountain Due");
+        menuItems.put(10, "Rice");
         prices.put(1, 50);
         prices.put(2, 45);
         prices.put(3, 40);
         prices.put(4, 60);
         prices.put(5, 50);
+        prices.put(6, 90);
+        prices.put(7, 25);
+        prices.put(8, 25);
+        prices.put(9, 25);
+        prices.put(10, 15);
     }
 
     public void displayMenu() {
-        System.out.println("\nThe Menu for Today is:");
-        menuItems.forEach((key, value) -> System.out.printf("%d.) %s    $%d\n", key, value, prices.get(key)));
+        ConsoleUtils.clearConsole();
+        System.out.println("Welcome to Rice To Meet You");
+        System.out.println("Today's Special Menu");
+        System.out.println("-------------------------------------");
+        
+        menuItems.forEach((key, value) -> 
+            System.out.printf(" %2d. %-20s $%d\n", key, value, prices.get(key))
+        );
+        
+        System.out.println("-------------------------------------");
+        System.out.println("💡 Tip: Enter the number to add an item to your tray!");
     }
-
     public String getItemName(int id) {
         return menuItems.getOrDefault(id, "Unknown Item");
     }

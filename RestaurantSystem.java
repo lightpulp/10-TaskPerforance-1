@@ -72,7 +72,7 @@ public class RestaurantSystem {
                     }
                     break;
                 case 'E':
-                    System.out.println("Thank you for using Menu-DO!");
+                    System.out.println("Thank you for purchasing, Rice To Meet You");
                     return; // Exit the loop
                 default:
                     System.out.println("Invalid choice. Please try again.");
